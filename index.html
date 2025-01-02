@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluenzia Admin Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Fluenzia Admin Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#admission">Student Admission</a></li>
+                <li><a href="#accounting">Accounting</a></li>
+                <li><a href="#organizing">Organizing Tasks</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="login">
+        <h2>Admin Login</h2>
+        <form action="/login" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <section id="admission">
+        <h2>Student Admission</h2>
+        <form action="/admission" method="post">
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="class">Class:</label>
+            <input type="text" id="class" name="class" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section id="accounting">
+        <h2>Accounting</h2>
+        <form action="/accounting" method="post">
+            <label for="studentId">Student ID:</label>
+            <input type="text" id="studentId" name="studentId" required>
+
+            <label for="feeAmount">Fee Amount:</label>
+            <input type="number" id="feeAmount" name="feeAmount" required>
+
+            <label for="dueDate">Due Date:</label>
+            <input type="date" id="dueDate" name="dueDate">
+
+            <button type="submit">Add Record</button>
+        </form>
+    </section>
+
+    <section id="organizing">
+        <h2>Organizing Tasks</h2>
+        <form action="/tasks" method="post">
+            <label for="taskTitle">Task Title:</label>
+            <input type="text" id="taskTitle" name="taskTitle" required>
+
+            <label for="taskDesc">Description:</label>
+            <textarea id="taskDesc" name="taskDesc"></textarea>
+
+            <label for="taskDate">Due Date:</label>
+            <input type="date" id="taskDate" name="taskDate">
+
+            <button type="submit">Add Task</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Fluenzia Admin Portal</p>
+    </footer>
+</body>
+</html>
